@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelito</title>
+    <link rel="stylesheet" href="scss.css"> <!-- Aquí se enlaza el archivo CSS -->
+</head>
+<body>
+    <div class="cake">
+        <div class="plate"></div>
+        <div class="layer layer-bottom"></div>
+        <div class="layer layer-middle"></div>
+        <div class="layer layer-top"></div>
+        <div class="icing"></div>
+        <div class="drip drip1"></div>
+        <div class="drip drip2"></div>
+        <div class="drip drip3"></div>
+        <div class="candle">
+            <div class="flame"></div>
+        </div>
+    </div>
+    <div id="message" style="display: none; color: white; text-align: center; margin-top: 60px; font-size: 24px;">
+        Apaga la vela mi corazón, (acércate al micro y soplale poquito jeje) No olvides pedir un deseo ;)
+        <br><br>
+        <button id="new-page-button" onclick="location.href='gift.html'">Tu regalito aquí</button>
+    </div>
+
+    <video id="birthday-video" style="display: none; position: absolute; left: 38%; top: 30.3%; width: 300px; z-index: 5; transform: rotate(-11deg);" src="new.mov"></video>
+
+    <script>
+        const video = document.getElementById('birthday-video');
+
+        // Mostrar el video
+        video.style.display = 'block';
+
+        // Reproducir el video
+        video.play();
+
+        // Configurar el tiempo para ocultar el video después de 42.25 segundos
+        setTimeout(() => {
+            video.style.display = 'none';
+        }, 43250); // 42.25 segundos en milisegundos
+    </script>
+
+    <audio id="background-music" src="cumple.mp3"></audio>
+    <div id="button-container">
+        <button id="play-button">Picale aquí mi corazón</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Aquí se enlaza el archivo JS -->
+</body>
+</html>
